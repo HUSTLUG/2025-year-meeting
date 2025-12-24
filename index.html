@@ -97,6 +97,7 @@
 			.agenda-list li {
 				margin: 18px 0;
 				font-size: 1.1em;
+				list-style-type: none;
 			}
 			.highlight-number {
 				color: #fff;
@@ -124,14 +125,34 @@
 				display: inline-block;
 				text-align: left;
 				margin: 15px 0;
+				padding-left: 0;
 			}
 			.feature-list li {
 				padding: 5px 0;
 				color: #2d3436;
+				list-style-type: none;
 			}
 			.feature-list li::before {
 				content: '✓';
 				color: #00b894;
+				margin-right: 10px;
+				font-weight: bold;
+			}
+			.plain-list {
+				list-style: none;
+				display: inline-block;
+				text-align: left;
+				margin: 15px 0;
+				padding-left: 0;
+			}
+			.plain-list li {
+				padding: 8px 0;
+				color: #2d3436;
+				list-style-type: none;
+			}
+			.plain-list li::before {
+				content: '✗';
+				color: #d63031;
 				margin-right: 10px;
 				font-weight: bold;
 			}
@@ -143,10 +164,11 @@
 				margin-top: 15px;
 			}
 			.screenshot-full {
-				max-width: 85%;
-				max-height: 550px;
+				width: 600px;
+				height: 600px;
 				border-radius: 10px;
 				box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+				object-fit: contain;
 			}
 			.reveal h3 {
 				color: #0984e3;
@@ -156,6 +178,31 @@
 				font-size: 0.85em;
 				margin-top: 20px;
 				font-style: italic;
+			}
+			.transition-table {
+				border-collapse: collapse;
+				margin: 20px auto;
+				background: rgba(255,255,255,0.8);
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+				min-width: 600px;
+			}
+			.transition-table th, .transition-table td {
+				padding: 15px 40px;
+				text-align: center;
+				border-bottom: 1px solid #e0e0e0;
+			}
+			.transition-table th {
+				background: #0984e3;
+				color: white;
+				font-weight: bold;
+			}
+			.transition-table tr:last-child td {
+				border-bottom: none;
+			}
+			.transition-table tr:hover {
+				background: rgba(9,132,227,0.05);
 			}
 		</style>
 	</head>
@@ -241,22 +288,103 @@
 						</ul>
 						<p class="tech-note">讲座内容于 B站 及微信公众号发布</p>
 					</section>
+					<section>
+						<h3>百团大战招新</h3>
+						<p>成功吸收10名新成员</p>
+						<ul class="feature-list">
+							<li>积极宣传社团文化与技术氛围</li>
+							<li>展示社团项目与活动成果</li>
+							<li>吸引志同道合的新同学加入</li>
+						</ul>
+						<p class="tech-note">为社团注入新鲜血液</p>
+					</section>
+					<section>
+						<h3>湖北省大学生科技社团计划</h3>
+						<p>参与中国科协青少年科技中心座谈会</p>
+						<ul class="feature-list">
+							<li>代表社团参加省级科技社团活动</li>
+							<li>向与会嘉宾介绍社团发展情况</li>
+							<li>与其他高校科技社团交流经验</li>
+						</ul>
+						<p class="tech-note">提升社团影响力与知名度</p>
+					</section>
 				</section>
 
 				<!-- 换届说明 -->
 				<section>
-					<div class="content-card">
-						<h2><span class="highlight-number">03</span> 换届说明</h2>
-						<p>新一届领导班子介绍与交接事宜</p>
-					</div>
+					<section>
+						<div class="content-card">
+							<h2><span class="highlight-number">03</span> 换届说明</h2>
+							<p>新一届领导班子介绍与交接事宜</p>
+						</div>
+					</section>
+					<section>
+						<h3>领导班子交接</h3>
+						<table class="transition-table">
+							<tr>
+								<th>职位</th>
+								<th>原任</th>
+								<th>现任</th>
+							</tr>
+							<tr>
+								<td>负责人</td>
+								<td>刘家兴</td>
+								<td>丁俊翔</td>
+							</tr>
+							<tr>
+								<td>服务器部部长</td>
+								<td colspan="2">丁俊翔</td>
+							</tr>
+							<tr>
+								<td>学术部部长</td>
+								<td>宁毓伟</td>
+								<td>蔡伟康</td>
+							</tr>
+							<tr>
+								<td>办公室部长</td>
+								<td>赵永森</td>
+								<td>于丰宁</td>
+							</tr>
+							<tr>
+								<td>宣传部部长</td>
+								<td>智弘贺</td>
+								<td>-</td>
+							</tr>
+						</table>
+					</section>
 				</section>
 
 				<!-- 新的一年工作计划 -->
 				<section>
-					<div class="content-card">
-						<h2><span class="highlight-number">04</span> 新的一年工作计划以及分配</h2>
-						<p>展望未来，明确目标与任务分工</p>
-					</div>
+					<section>
+						<div class="content-card">
+							<h2><span class="highlight-number">04</span> 新的一年工作计划</h2>
+							<p>展望未来，明确目标与任务分工</p>
+						</div>
+					</section>
+					<section>
+						<h3>不足</h3>
+						<ul class="plain-list">
+							<li>活动宣传力度不足，参与人数有待提升</li>
+							<li>社团内部交流较少，成员凝聚力待加强</li>
+							<li>技术分享频率不稳定，未能形成固定周期</li>
+							<li>新成员培养机制不完善，缺乏系统性引导</li>
+							<li>项目文档维护不规范，知识传承存在断层</li>
+							<li>线下活动组织较少，成员互动机会有限</li>
+						</ul>
+					</section>
+					<section>
+						<h3>工作计划</h3>
+						<ul class="feature-list">
+							<li>继续开展基础知识讲座和话题式讲座</li>
+							<li>维护并完善 HLUG Diagram 项目</li>
+							<li>继续维护其他项目，包括网站、ShareLaTeX、蚂蚁笔记、Gitlab 等</li>
+						</ul>
+					</section>
+					<section>
+						<h3>任务分配</h3>
+						<img src="public/wenjuan.png" alt="任务分配" class="screenshot-full">
+					</section>
 				</section>
 
 				<!-- 结束页 -->
