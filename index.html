@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>HLUG 年度会议</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			:root {
+				--r-main-color: #2d3436;
+				--r-heading-color: #0984e3;
+				--r-link-color: #0984e3;
+			}
+			.reveal {
+				background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 50%, #dfe6ed 100%);
+			}
+			.reveal::before {
+				content: '';
+				position: absolute;
+				top: -50%;
+				right: -20%;
+				width: 80%;
+				height: 80%;
+				background: radial-gradient(circle, rgba(9,132,227,0.08) 0%, transparent 70%);
+				border-radius: 50%;
+				z-index: 0;
+			}
+			.reveal::after {
+				content: '';
+				position: absolute;
+				bottom: -30%;
+				left: -10%;
+				width: 60%;
+				height: 60%;
+				background: radial-gradient(circle, rgba(116,185,255,0.1) 0%, transparent 70%);
+				border-radius: 50%;
+				z-index: 0;
+			}
+			.reveal .slides {
+				z-index: 1;
+			}
+			.reveal h1 {
+				color: #0984e3;
+				text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+			}
+			.reveal h2 {
+				color: #0984e3;
+				border-bottom: 3px solid #74b9ff;
+				padding-bottom: 15px;
+				display: inline-block;
+			}
+			.reveal .slides section {
+				text-align: center;
+			}
+			.logo {
+				width: 120px;
+				margin-bottom: 20px;
+				filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.15));
+			}
+			.title-logo {
+				width: 180px;
+				margin-bottom: 20px;
+				filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.2));
+			}
+			.subtitle {
+				color: #636e72;
+				font-size: 0.9em;
+			}
+			.header-row {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 20px;
+				margin-bottom: 20px;
+			}
+			.header-row h2 {
+				margin: 0;
+			}
+			.agenda-list {
+				text-align: left;
+				display: inline-block;
+				background: rgba(255,255,255,0.7);
+				padding: 25px 40px;
+				border-radius: 15px;
+				box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+				backdrop-filter: blur(4px);
+				list-style: none;
+				margin: 0;
+				padding-left: 40px;
+			}
+			.agenda-list li {
+				margin: 18px 0;
+				font-size: 1.1em;
+			}
+			.highlight-number {
+				color: #fff;
+				background: linear-gradient(135deg, #0984e3, #74b9ff);
+				padding: 4px 12px;
+				border-radius: 8px;
+				margin-right: 12px;
+				font-weight: bold;
+				font-size: 0.9em;
+			}
+			.content-card {
+				background: rgba(255,255,255,0.8);
+				padding: 40px 60px;
+				border-radius: 20px;
+				box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+				display: inline-block;
+			}
+			.content-card p {
+				color: #636e72;
+				font-size: 1.2em;
+				margin-top: 20px;
+			}
+			.feature-list {
+				list-style: none;
+				display: inline-block;
+				text-align: left;
+				margin: 15px 0;
+			}
+			.feature-list li {
+				padding: 5px 0;
+				color: #2d3436;
+			}
+			.feature-list li::before {
+				content: '✓';
+				color: #00b894;
+				margin-right: 10px;
+				font-weight: bold;
+			}
+			.screenshot {
+				max-width: 70%;
+				max-height: 350px;
+				border-radius: 10px;
+				box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+				margin-top: 15px;
+			}
+			.screenshot-full {
+				max-width: 85%;
+				max-height: 550px;
+				border-radius: 10px;
+				box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+			}
+			.reveal h3 {
+				color: #0984e3;
+			}
+			.tech-note {
+				color: #636e72;
+				font-size: 0.85em;
+				margin-top: 20px;
+				font-style: italic;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- 封面 -->
+				<section>
+					<img src="public/linux_logo5.png" alt="HLUG Logo" class="title-logo">
+					<h1>HLUG 年度会议</h1>
+					<p class="subtitle">HUST Linux User Group</p>
+					<p class="subtitle">华中科技大学 Linux 协会</p>
+					<p class="subtitle" style="margin-top: 30px;">2025年12月24日</p>
+					<p class="subtitle">主持人：丁俊翔</p>
+				</section>
+
+				<!-- 议程概览 -->
+				<section>
+					<div class="header-row">
+						<img src="public/linux_logo5.png" alt="HLUG Logo" class="logo">
+						<h2>会议议程</h2>
+					</div>
+					<ul class="agenda-list">
+						<li><span class="highlight-number">01</span> 社团负责人致辞</li>
+						<li><span class="highlight-number">02</span> 上一年工作汇报</li>
+						<li><span class="highlight-number">03</span> 换届说明</li>
+						<li><span class="highlight-number">04</span> 新的一年工作计划以及分配</li>
+					</ul>
+				</section>
+
+				<!-- 社团负责人致辞 -->
+				<section>
+					<div class="content-card">
+						<h2><span class="highlight-number">01</span> 社团负责人致辞</h2>
+						<p>欢迎各位成员参加本次年度会议</p>
+					</div>
+				</section>
+
+				<!-- 上一年工作汇报 -->
+				<section>
+					<section>
+						<div class="content-card">
+							<h2><span class="highlight-number">02</span> 上一年工作汇报</h2>
+							<p>回顾过去一年的工作成果与经验</p>
+						</div>
+					</section>
+					<section>
+						<h3>公共服务升级</h3>
+						<p>Docker 代理服务扩展支持</p>
+						<ul class="feature-list">
+							<li>Docker Hub</li>
+							<li>GHCR (GitHub Container Registry)</li>
+							<li>GCR (Google Container Registry)</li>
+							<li>Quay.io</li>
+							<li>MCR (Microsoft Container Registry)</li>
+						</ul>
+						<p class="tech-note">基于 Elysia 框架，HLUG 内部开发</p>
+					</section>
+					<section>
+						<img src="public/docker.jpg" alt="Docker代理截图" class="screenshot-full">
+					</section>
+					<section>
+						<h3>公共服务平台新增工具</h3>
+						<p>流程图绘制网站</p>
+						<ul class="feature-list">
+							<li>面向全校同学开放</li>
+							<li>支持 Mermaid 流程图语言</li>
+							<li>支持 nomnoml 流程图语言</li>
+						</ul>
+						<p class="tech-note">基于 React + Elysia 开发，目前还在开发中</p>
+					</section>
+					<section>
+						<img src="public/diagram.jpg" alt="流程图网站截图" class="screenshot-full">
+					</section>
+					<section>
+						<h3>技术讲座活动</h3>
+						<p>开展多次基础讲座</p>
+						<ul class="feature-list">
+							<li>Linux 基础</li>
+							<li>Emacs 编辑器</li>
+							<li>LaTeX 排版</li>
+							<li>Gentoo Linux</li>
+						</ul>
+						<p class="tech-note">讲座内容于 B站 及微信公众号发布</p>
+					</section>
+				</section>
+
+				<!-- 换届说明 -->
+				<section>
+					<div class="content-card">
+						<h2><span class="highlight-number">03</span> 换届说明</h2>
+						<p>新一届领导班子介绍与交接事宜</p>
+					</div>
+				</section>
+
+				<!-- 新的一年工作计划 -->
+				<section>
+					<div class="content-card">
+						<h2><span class="highlight-number">04</span> 新的一年工作计划以及分配</h2>
+						<p>展望未来，明确目标与任务分工</p>
+					</div>
+				</section>
+
+				<!-- 结束页 -->
+				<section>
+					<div class="header-row">
+						<img src="public/linux_logo5.png" alt="HLUG Logo" class="title-logo">
+						<h2>谢谢大家</h2>
+					</div>
+					<p class="subtitle">期待新一年的精彩!</p>
+					<p class="subtitle">HUST Linux User Group</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				transition: 'slide',
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
